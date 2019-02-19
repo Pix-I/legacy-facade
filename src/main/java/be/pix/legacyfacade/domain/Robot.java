@@ -1,18 +1,19 @@
 package be.pix.legacyfacade.domain;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @Entity
+@Table(name = "ROBOT")
 public class Robot {
 
+    @Column(name = "name")
     private String name;
     @Id
     @GeneratedValue
     private String id;
+    @Column(name = "model")
     private String model;
 
     public Robot(){}
